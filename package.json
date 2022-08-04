@@ -2,13 +2,21 @@
   "name": "eco-safety",
   "version": "0.1.0",
   "private": true,
+  "author": "Vladimir Grinko",
+  "homepage": "https://Vladimir-Grinko.github.io/eco-safety",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^3.3.4",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "gh-pages": "^4.0.0",
+    "mdb-vue-ui-kit": "^2.0.0",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
     "vuex": "^4.0.0"
@@ -42,7 +50,14 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    }
   },
   "browserslist": [
     "> 1%",
