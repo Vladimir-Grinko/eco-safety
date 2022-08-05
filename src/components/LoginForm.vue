@@ -27,14 +27,7 @@
           </div>
 
           <!-- Submit button -->
-          <MDBBtn
-            color="primary"
-            size="lg"
-            @click="entry"
-            :class="getIsDisabledButton"
-          >
-            ВОЙТИ
-          </MDBBtn>
+          <MDBBtn color="primary" size="lg" @click="entry"> ВОЙТИ </MDBBtn>
           <p
             v-if="getLogin.length === 0 || getPassword.length === 0"
             class="text-danger p-2"
@@ -66,15 +59,9 @@ export default {
     "getLoginError",
     "getIMEI",
     "isLoggedIn",
-    "getIsDisabledButton",
   ]),
   methods: {
-    ...mapActions([
-      "login",
-      "enteredLogin",
-      "enteredPassword",
-      "disabledButton",
-    ]),
+    ...mapActions(["login", "enteredLogin", "enteredPassword"]),
     enterLogin(data) {
       const login = data.trim();
       this.enteredLogin(login);
@@ -92,13 +79,6 @@ export default {
       };
       this.login(loginPayload);
     },
-  },
-  renderTriggered() {
-    if (this.getLogin.length === 0 || this.getPassword.length === 0) {
-      this.disabledButton("disabled");
-    } else {
-      this.disabledButton("");
-    }
   },
 };
 </script>

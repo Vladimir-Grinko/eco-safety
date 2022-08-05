@@ -16,7 +16,6 @@ const initialState = localStorageService.getLogin()
       documents: localStorageService.getAllDocuments(),
       isShowLoader: false,
       showLoginForm: false,
-      isDisabledButton: "",
     }
   : {
       isLoggedIn: false,
@@ -28,7 +27,6 @@ const initialState = localStorageService.getLogin()
       documents: [],
       isShowLoader: false,
       showLoginForm: false,
-      isDisabledButton: "disabled",
     };
 
 export default {
@@ -69,9 +67,6 @@ export default {
     getShowLoginForm(state) {
       return state.showLoginForm;
     },
-    getIsDisabledButton(state) {
-      return state.isDisabledButton;
-    },
   },
   mutations: {
     // внесение в стейт введенных данных
@@ -104,9 +99,6 @@ export default {
     },
     updateShowLoginForm(state, data) {
       state.showLoginForm = data;
-    },
-    updateIsDisabledButton(state, data) {
-      state.isDisabledButton = data;
     },
   },
   actions: {
@@ -201,9 +193,6 @@ export default {
     toggleLoginform(ctx, data) {
       ctx.commit("updateShowLoginForm", data);
     },
-    disabledButton(ctx, data) {
-      ctx.commit("updateIsDisabledButton", data);
-    },
     logOut(ctx) {
       localStorageService.removeAuthData();
       ctx.state = {
@@ -216,7 +205,6 @@ export default {
         documents: [],
         isShowLoader: false,
         showLoginForm: false,
-        isDisabledButton: "disabled",
       };
     },
   },
