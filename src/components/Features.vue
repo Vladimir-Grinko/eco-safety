@@ -2,7 +2,12 @@
   <div class="container">
     <MDBContainer fluid class="mar-b-50 p-1">
       <MDBRow>
-        <MDBCol md="4" class="text-center">
+        <MDBCol
+          md="4"
+          class="text-center wow fadeInUp"
+          data-wow-duration="3s"
+          data-wow-offset="170"
+        >
           <img
             src="https://ecohospital.ru/img/1.svg"
             class="img-fluid"
@@ -17,7 +22,12 @@
             данные.
           </p>
         </MDBCol>
-        <MDBCol md="4" class="text-center">
+        <MDBCol
+          md="4"
+          class="text-center wow fadeInUp"
+          data-wow-duration="3s"
+          data-wow-offset="170"
+        >
           <img
             src="https://ecohospital.ru/img/2.svg"
             class="img-fluid"
@@ -33,7 +43,12 @@
             медицинской организации и доступны только их владельцу.
           </p>
         </MDBCol>
-        <MDBCol md="4" class="text-center">
+        <MDBCol
+          md="4"
+          class="text-center wow fadeInUp"
+          data-wow-duration="3s"
+          data-wow-offset="170"
+        >
           <img
             src="https://ecohospital.ru/img/3.svg"
             class="img-fluid"

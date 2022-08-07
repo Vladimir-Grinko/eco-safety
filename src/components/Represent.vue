@@ -3,27 +3,29 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-lg-12 col-sm-12">
-          <h1><a name="mission"></a>Почему "Эко-госпиталь"?</h1>
+          <h1 class="wow bounceIn" data-wow-duration="2s">
+            <a name="mission"></a>Почему "Эко-госпиталь"?
+          </h1>
           <hr />
-          <p>
+          <p class="wow fadeInLeft" data-wow-duration="2s">
             <i class="fas fa-check fa-lg pr-10"> </i> Возможности нашего сервиса
             соответствуют значению латинского слова "Hospitium" -
             ГОСТЕПРИИМСТВО.
           </p>
-          <p>
+          <p class="wow fadeInRight" data-wow-duration="2s">
             <i class="fas fa-check fa-lg pr-10"> </i> Мы создаем максимально
             комфортные условия обслуживания для наших клиентов, упрощая и
             ускоряя процессы взаимодействия. Вам больше не нужно стоять в
             очередях и тратить свое время на поездки за результатами
             обследований!
           </p>
-          <p>
+          <p class="wow fadeInLeft" data-wow-duration="2s">
             <i class="fas fa-check fa-lg pr-10"> </i> Исключая бумажный
             документооборот и лишние передвижения по городу, мы вместе с нашими
             клиентами экономим бумагу, углеводород, сохраняем лес, снижаем
             загрязнённость воздуха.
           </p>
-          <p>
+          <p class="wow fadeInRight" data-wow-duration="2s">
             <i class="fas fa-check fa-lg pr-10"> </i> Мы предоставляем
             возможность пользоваться личным кабинетом, консультироваться со
             специалистами по имеющейся в личном кабинете информации, получать

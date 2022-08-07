@@ -13,7 +13,8 @@
         <MDBListGroupItem
           v-for="document in getDocuments"
           :key="document"
-          class="d-flex justify-content-between align-items-center m-2"
+          class="d-flex justify-content-between align-items-center m-2 wow fadeInUp"
+          data-wow-duration="2s"
           action
           color="light"
           noBorder
@@ -34,7 +35,8 @@
             </div>
           </div>
           <a
-            class="btn btn-link btn-rounded btn-sm"
+            class="btn btn-link btn-rounded btn-sm wow fadeInRight"
+            data-wow-duration="2s"
             :href="document.hash"
             :download="document.doc_name"
             >Скачать</a

@@ -25,6 +25,8 @@ import Footers from "./components/Footers.vue";
 import DocumentsList from "./components/DocumentsList.vue";
 import Loader from "./components/Loader.vue";
 
+import WOW from "wow.js";
+
 export default {
   name: "App",
   components: {
@@ -62,6 +64,18 @@ export default {
         upIcon.classList.add("toolbar-down");
       }
     };
+
+    let wow = new WOW({
+      boxClass: "wow", // css-класс анимированного элемента (по умолчанию wow)
+      animateClass: "animated", // класс анимации css (по умолчанию animated)
+      offset: 0, // расстояние до элемента при запуске анимации (по умолчанию 0)
+      mobile: true, // запускать анимацию на мобильных устройствах (по умолчанию true)
+      live: true, // воздействовать на асинхронно загружаемый контент (по умолчанию true)
+      //scrollContainer: null, // необязательный селектор контейнера прокрутки, в противном случае используйте window,
+      resetAnimation: true, // сбросить анимацию в конце (по умолчанию true)
+    });
+
+    wow.init();
   },
 };
 </script>

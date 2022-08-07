@@ -2,7 +2,11 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 address wow">
+        <div
+          class="col-lg-3 address wow fadeInUp"
+          data-wow-duration="2s"
+          data-wow-offset="80"
+        >
           <h1>НАШИ КОНТАКТЫ</h1>
           <address>
             <p>

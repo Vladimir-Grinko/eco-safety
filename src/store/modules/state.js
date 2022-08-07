@@ -127,6 +127,7 @@ export default {
             "updateLoginError",
             "Логин и/или пароль введены неправильно!"
           );
+          ctx.commit("updateShowLoader", false);
         }
       } catch (error) {
         ctx.commit("updateLoginError", error.message);
