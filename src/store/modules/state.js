@@ -150,7 +150,7 @@ export default {
         if (content) {
           const arr = await Promise.all(
             content.map(async (value) => {
-              const endHash = await ctx.dispatch("downloadDocument", value);
+              const endHash = await ctx.dispatch("getHashDocument", value);
               return { ...value, hash: endHash };
             })
           );
@@ -164,7 +164,7 @@ export default {
       }
     },
     // Зарос на получение хэша для загрузки документа
-    async downloadDocument(ctx, data) {
+    async getHashDocument(ctx, data) {
       try {
         const payload = {
           id_document: data.id_document,

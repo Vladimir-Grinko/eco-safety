@@ -37,8 +37,7 @@
           <a
             class="btn btn-link btn-rounded btn-sm wow fadeInRight"
             data-wow-duration="2s"
-            :href="document.hash"
-            :download="document.doc_name"
+            @click="onLoad(document.hash, document.doc_name)"
             >Скачать</a
           >
         </MDBListGroupItem>
@@ -59,6 +58,26 @@ export default {
     MDBListGroupItem,
   },
   computed: mapGetters(["getDocuments"]),
+  methods: {
+    onLoad(hash, docName) {
+      fetch(hash)
+        .then((resp) => resp.blob())
+        .then((blob) => {
+          let expansion = blob.type.toString().slice(12, blob.type.length);
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.style.display = "none";
+          a.href = url;
+
+          a.download = `${docName}.${expansion}`;
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          a.remove();
+        })
+        .catch(() => alert("Какая-то ошибка на сервере. Попробуйте позже"));
+    },
+  },
 };
 </script>
 
